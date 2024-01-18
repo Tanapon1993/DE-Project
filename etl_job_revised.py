@@ -19,10 +19,6 @@ postgres_info = {
     'port': os.environ['postgres-port'],
 }
 
-# Extract data from source
-aws_access_key_id = 'AKIASZSZ6RCESSDHLTWN'
-aws_secret_access_key = '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' 
-
 session = boto3.Session(
     aws_access_key_id = aws_access_key_id,
     aws_secret_access_key= aws_secret_access_key
