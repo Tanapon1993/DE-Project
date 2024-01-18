@@ -19,16 +19,7 @@ postgres_info = {
     'port': os.environ['postgres-port'],
 }
 
-# Extract data from source
-aws_access_key_id = 'AKIASZSZ6RCEUQJRNYM5'
-aws_secret_access_key = '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' 
-
-session = boto3.Session(
-    aws_access_key_id = aws_access_key_id,
-    aws_secret_access_key= aws_secret_access_key
-)
-
-s3_client = session.client('s3')
+s3_client = boto3.client('s3')
 bucket_name = 'fullstackdata2023'
 
 def extract_folder(year, month, date):
